@@ -1,6 +1,5 @@
 # Reglas #
 - Llamar a la carpeta con el archivo a compilar "listingx.y", cuidando que todo esté en minúscula.
-- 
 
 ```makefile
 #  -------------------------------------------------
