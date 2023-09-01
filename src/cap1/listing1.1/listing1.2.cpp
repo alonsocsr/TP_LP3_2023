@@ -1,4 +1,5 @@
 #include <cassert>
+#include <stdlib.h>
 #include "reciprocal.hpp"
 
 double reciprocal (int i){
