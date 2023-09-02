@@ -1,6 +1,7 @@
 {
     "files.associations": {
         "*.pl": "prolog",
-        "reciprocal.hpp": "c"
+        "reciprocal.hpp": "c",
+        "listing1.3.hpp": "c"
     }
 }
