@@ -8,7 +8,8 @@ Nth prime number, where N is the value pointed to by *ARG. */
 
 void* compute_prime(void *arg)
 {
-  int *value = malloc(sizeof(int));
+  // an integer is reserved dynamically to return his pointer as a pointer to void
+  int *value = malloc(sizeof(int)); 
   int candidate = 2;
   int n = *((int *)arg);
 
@@ -39,6 +40,8 @@ void* compute_prime(void *arg)
   {
     pthread_t thread;
     int which_prime = 5000;
+
+    // a pointer to void that we gonna use to capture the thread return value
     void *ptr_void;
 
     /* Start the computing thread, up to the 5,000th prime number. */
@@ -46,10 +49,13 @@ void* compute_prime(void *arg)
     /* Do some other work here... */
     /* Wait for the prime number thread to complete, and get the result.*/
     pthread_join (thread, &ptr_void);
-    /* Print the largest prime it computed. */
+    
+    /*cast the return value to a pointer, there's not gonna be an error because we have reserved the space for an integer*/
     int prime = *((int *)ptr_void);
+    /* Print the largest prime it computed. */
     printf("The %dth prime number is % d.\n", which_prime, prime);
 
+    /*free the memory that we have reserved before*/
     free(ptr_void);
     return 0;
   }

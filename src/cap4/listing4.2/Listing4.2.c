@@ -1,5 +1,6 @@
 #include <pthread.h>
 #include <stdio.h>
+#include <unistd.h>
 
 /* Parameters to print_function.*/
 struct char_print_parms
@@ -41,6 +42,8 @@ int main()
   thread2_args.character = 'o';
   thread2_args.count = 20000;
   pthread_create(&thread2_id, NULL, &char_print, &thread2_args);
+
+  sleep(2);
 
   return 0;
 }
