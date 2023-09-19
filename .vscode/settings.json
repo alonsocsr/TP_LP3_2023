@@ -1,9 +1,0 @@
-{
-    "files.associations": {
-        "*.pl": "prolog",
-        "reciprocal.hpp": "c",
-        "listing1.3.hpp": "c",
-        "pthread.h": "c",
-        "stdio.h": "c"
-    }
-}

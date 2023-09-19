@@ -9,7 +9,7 @@ Nth prime number, where N is the value pointed to by *ARG. */
 void* compute_prime(void *arg)
 {
   // an integer is reserved dynamically to return his pointer as a pointer to void
-  int *value = malloc(sizeof(int)); 
+  int *value = (int*)malloc(sizeof(int)); 
   int candidate = 2;
   int n = *((int *)arg);
 

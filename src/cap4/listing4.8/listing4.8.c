@@ -14,7 +14,7 @@ void deallocate_buffer(void *buffer)
   free(buffer);
 }
 
-void* do_some_work()
+void *do_some_work()
 {
   /* Allocate a temporary buffer. */
   void *temp_buffer = allocate_buffer(1024);

@@ -1,3 +1,4 @@
 build/
 *.exe
+*.out
 #Para que no guarde los archivos compilados#
