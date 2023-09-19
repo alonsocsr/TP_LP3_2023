@@ -1,6 +1,6 @@
 # compilador
 CC := g++
-CFLAGS := -fpermissive -lpthread
+CFLAGS := -fpermissive -lpthread -ltiff
 
 # direcciones
 SRC_DIR := src
@@ -13,7 +13,7 @@ listing%:
 	$(eval arch_dest := $(shell echo $(obj_dir) | sed 's/$(SRC_DIR)/$(BUILD_DIR)/g'))
 	$(eval build_dir := $(shell dirname $(arch_dest)))
 	@mkdir -p $(build_dir) 
-	$(CC) $(CFLAGS) -o $(arch_dest) $(obj_dir)/* ;
+	$(CC) -o $(arch_dest) $(obj_dir)/* $(CFLAGS);
 
 
 # Define a variable with the list of files in the source directory
