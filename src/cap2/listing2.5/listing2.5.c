@@ -58,7 +58,6 @@ int main(){
     size_t tamaño = sizeof(mensaje)/sizeof(char);
     archivo_temporal = write_temp_file(mensaje, tamaño);
     printf("Este es el mensaje: %s ",read_temp_file(archivo_temporal, &tamaño));
-
     return 0;
 
 }
