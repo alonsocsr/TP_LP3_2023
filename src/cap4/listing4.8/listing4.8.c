@@ -39,6 +39,7 @@ void *do_some_work()
   this actually performs the cleanup by calling
   deallocate_buffer. */
   pthread_cleanup_pop(1);
+  return NULL;
 }
 
 int main(){

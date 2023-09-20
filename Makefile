@@ -33,6 +33,13 @@ listing%: # hace coindicir los targets con el nombre listingX.Y donde % es un co
 		$(CC) $(CFLAGS) -c $(obj_dir)/listing1.2.cpp -o listing1.2.o; \
 		$(CC) listing1.1.o listing1.2.o -o $(arch_dest); \
 		rm *.o; \
+	elif [ "$(listing)" = "listing2.7" ]; then \
+		$(CC) $(CFLAGS) -c $(obj_dir)/listing2.7.c -o listing2.7.o; \
+		ar cr libtest.a listing2.7.o; \
+		$(CC) $(CFLAGS) $(obj_dir)/listing2.8.c -L. -ltest -o $(arch_dest); \
+		rm *.o; \
+	elif [ "$(listing)" = "listing2.9" ]; then \
+		$(CC) $(CFLAGS) $(obj_dir)/listing2.9.c -o $(arch_dest); \
 	else \
 		$(CC) $(CFLAGS) -o $(arch_dest) $(obj_dir)/* ; \
 	fi
