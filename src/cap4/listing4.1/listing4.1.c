@@ -4,7 +4,7 @@
 The parameter is unused.
 Does not return.
 */
-void *print_xs(void *unused)
+void *print_xs()
 {
   while (1)
     fputc('x', stderr);

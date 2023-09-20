@@ -39,8 +39,8 @@ char* read_from_file (const char* filename, size_t length){
 }
 
 int main(){
-    const char* nombre_archivo = "archivo.txt";
-    size_t tamaño = 100;  
+    const char* nombre_archivo = "../../archivo.txt";
+    size_t tamaño = 18;
 
     char* datos = read_from_file(nombre_archivo, tamaño);
 
